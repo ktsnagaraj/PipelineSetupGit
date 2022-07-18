@@ -18,6 +18,7 @@ public class SearchAProduct {
 		driver.get("https://www.amazon.com.mx/");
 		Actions action = new Actions(driver);
 		Thread.sleep(2000);
+		System.out.println("As Expected");
 		WebElement prime = driver.findElement(By.xpath("//span[text()='Prime']"));
 		action.moveToElement(prime);
 		Thread.sleep(2000);
