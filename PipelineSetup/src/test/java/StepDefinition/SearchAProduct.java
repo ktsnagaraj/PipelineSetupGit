@@ -1,5 +1,7 @@
 package StepDefinition;
 
+import java.io.File;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -21,6 +23,7 @@ public class SearchAProduct {
 		System.out.println("As Expected");
 		WebElement prime = driver.findElement(By.xpath("//span[text()='Prime']"));
 		action.moveToElement(prime);
+		File file = new File("C:\\Users\\Dra Nallely Corona\\Desktop\\Selenium\\sample.png");
 		Thread.sleep(2000);
 		driver.quit();
 	}
