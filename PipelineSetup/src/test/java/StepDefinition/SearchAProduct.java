@@ -1,6 +1,7 @@
 package StepDefinition;
 
 import java.io.File;
+import java.io.IOException;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class SearchAProduct {
 
-	public static void main(String[] args) throws InterruptedException {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		// TODO Auto-generated method stub
 		Thread.sleep(2000);
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dra Nallely Corona\\Downloads\\NewChromeDriver\\chromedriver.exe");
@@ -24,6 +25,7 @@ public class SearchAProduct {
 		WebElement prime = driver.findElement(By.xpath("//span[text()='Prime']"));
 		action.moveToElement(prime);
 		File file = new File("C:\\Users\\Dra Nallely Corona\\Desktop\\Selenium\\sample.png");
+		file.createNewFile();
 		Thread.sleep(2000);
 		driver.quit();
 	}
